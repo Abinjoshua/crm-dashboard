@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <templates>
     <t t-name="crm_dashboard.CrmDashboard">
-        <div>
+        <div style="height:900px; overflow-y:scroll">
             <div>
                 <center>
-                    <h1 style="margin:20px;">CRM Dashboard</h1>
+                    <h1 style="font-size: 50px; font-weight: bold; color: #374151; margin-bottom: 28px;">CRM Dashboard
+                    </h1>
                 </center>
             </div>
-            <div class="ms-lg-2">
-                <span class="small me-1 navbar-text">Filter By:</span>
+            <div class="ms-lg-2" style="padding-left:200px;">
+                <span class="small me-1 navbar-text" style="font-size: 14px; font-weight: bold">Filter By:</span>
                 <div class="btn-group">
                     <button id="portal_searchbar_filters" data-bs-toggle="dropdown"
                             class="btn btn-light dropdown-toggle">
@@ -17,12 +18,12 @@
                     </button>
                 </div>
             </div>
-            <div class="row main-section" style="margin-left: 120px;">
+            <div class="row main-section" style="margin-left: 120px; padding-right:90px">
                 <!-- Lead Tile-->
                 <div id="leads" class="col-md-4 col-sm-6 tot_tasks oh-payslip"
                      style=" overflow: hidden; padding-top: 30px;">
                     <div class="oh-card" style="box-shadow:2px 4px 8px 2px rgba(0,0,0.3,0.2);
-       display: flex; justify-content: center;" role="button">
+       display: flex; justify-content: center;">
                         <div class="oh-card-body"
                              style="padding: 5px 5px; float: left; width: 100%;
                  height: auto; box-sizing: border-box; margin: 0;">
@@ -87,7 +88,7 @@
                      class="col-md-4 col-sm-6 tot_tasks oh-payslip"
                      style=" overflow: hidden; padding-top: 30px;">
                     <div class="oh-card" style="box-shadow:2px 4px 8px 2px rgba(0,0,0.3,0.2);
-       display: flex; justify-content: center;" role="button">
+       display: flex; justify-content: center;">
                         <div class="oh-card-body"
                              style="padding: 5px 5px; float: left; width: 100%;
                  height: auto; box-sizing: border-box; margin: 0;">
@@ -121,7 +122,7 @@
                      class="col-md-4 col-sm-6 tot_tasks oh-payslip"
                      style=" overflow: hidden; padding-top: 30px;">
                     <div class="oh-card" style="box-shadow:2px 4px 8px 2px rgba(0,0,0.3,0.2);
-       display: flex; justify-content: center;" role="button">
+       display: flex; justify-content: center;">
                         <div class="oh-card-body"
                              style="padding: 5px 5px; float: left; width: 100%;
                  height: auto; box-sizing: border-box; margin: 0;">
@@ -153,7 +154,7 @@
                 <div id="win ratio" class="col-md-4 col-sm-6 tot_tasks oh-payslip"
                      style=" overflow: hidden; padding-top: 30px;">
                     <div class="oh-card" style="box-shadow:2px 4px 8px 2px rgba(0,0,0.3,0.2);
-       display: flex; justify-content: center;" role="button">
+       display: flex; justify-content: center;">
                         <div class="oh-card-body"
                              style="padding: 5px 5px; float: left; width: 100%;
                  height: auto; box-sizing: border-box; margin: 0;">
@@ -182,8 +183,32 @@
                     </div>
                 </div>
             </div>
-            <div style="width: 25%">
-                <canvas id="chart_example"/>
+            <div class="row mt-4" style="padding-top:70px; padding-left:200px;">
+                <div class="col-md-6">
+                    <div class="oh-card" style="box-shadow:2px 4px 8px 2px rgba(0,0,0.3,0.2);
+       display: flex; justify-content: center; width:600px; height:600px;">
+                        <div style="width:500px; height:500px;">
+                            <span style="font-size: 15px; padding-left:145px;">Activity Pie Chart</span>
+                            <canvas id="activity_pie_chart"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="oh-card" style="box-shadow:2px 4px 8px 2px rgba(0,0,0.3,0.2);
+       display: flex; justify-content: center; width:600px; height:600px;">
+                        <div style="width:700px; height:700px;">
+                            <canvas id="lost_lead_graph"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6" style="padding-top:70px;">
+                    <div class="oh-card" style="box-shadow:2px 4px 8px 2px rgba(0,0,0.3,0.2);
+           display: flex; justify-content: center; width:600px; height:600px;">
+                        <div style="width:700px; height:700px;">
+                            <canvas id="campaign_lead_graph"/>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </t>
