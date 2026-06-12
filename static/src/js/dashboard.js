@@ -11,7 +11,7 @@ class CrmDashboard extends Component {
         super.setup();
         this.orm = useService('orm');
         this.state = useState({
-            selecteddate: false
+            selecteddate: false,
         })
         this._fetch_data();
 
@@ -32,11 +32,11 @@ class CrmDashboard extends Component {
         await loadJS(["/web/static/lib/Chart/Chart.js"])
 
         var chart = new Chart("all_tile_chart", {
-            type: "line",
+            type: "bar",
             data: {
-                labels: [result.total_leads_label,result.win_ratio_label,result.total_opportunity_label,result.expected_revenue_label,result.revenue_label],
+                labels: [result.total_leads_label, result.win_ratio_label, result.total_opportunity_label, result.expected_revenue_label, result.revenue_label],
                 datasets: [{
-                    data: [result.total_leads,result.win_ratio_int,result.total_opportunity,result.expected_revenue,result.revenue],
+                    data: [result.total_leads, result.win_ratio_int, result.total_opportunity, result.expected_revenue, result.revenue],
                     pointBackgroundColor: "black",
                 }]
             },
@@ -56,11 +56,11 @@ class CrmDashboard extends Component {
         });
 
         var chart = new Chart("lost_lead_graph", {
-            type: "bar",
+            type: "doughnut",
             data: {
                 labels: result.lost_leads_labels,
                 datasets: [{
-                    label: 'Lost',
+                    label: 'Lost Lead Graph',
                     data: result.lost_leads_values,
                     pointBackgroundColor: "black",
                 }]
@@ -81,13 +81,29 @@ class CrmDashboard extends Component {
             option: {}
         });
 
+
         var chart = new Chart("medium_lead_graph", {
-            type: "doughnut",
+            type: "scatter",
             data: {
                 labels: result.medium_labels,
                 datasets: [{
                     label: 'Medium Lead Graph',
-                    data: result.medium_values,
+                    data: [{
+                        x: result.medium_values[0],
+                        y: result.medium_values[0]
+                    }, {
+                        x: result.medium_values[1],
+                        y: result.medium_values[1]
+                    }, {
+                        x: result.medium_values[2],
+                        y: result.medium_values[2]
+                    }, {
+                        x: result.medium_values[3],
+                        y: result.medium_values[3]
+                    }, {
+                        x: result.medium_values[4],
+                        y: result.medium_values[4]
+                    }],
                     pointBackgroundColor: "black",
                 }]
             },
@@ -95,16 +111,6 @@ class CrmDashboard extends Component {
         });
 
     }
-
-    // async getDate(){
-    //     console.log(45678)
-    //     console.log(this.state.selecteddate)
-    //             let result = await this.orm.call("crm.lead", "get_tiles_data", [], {'date':this.state.selecteddate});
-    //     console.log(result)
-    //     this._fetch_data()
-    //
-    // }
-
 
 }
 

@@ -189,7 +189,7 @@
             <div class="row mt-4" style="padding-top:70px; padding-left:200px;">
                 <div class="col-md-6">
                     <div class="oh-card" style="box-shadow:2px 4px 8px 2px rgba(0,0,0.3,0.2);
-       display: flex; justify-content: center; width:600px; height:600px;">
+       display: flex; justify-content: center; width:700px; height:600px;">
                         <div style="width:550px; height:550px;">
                             <span style="font-size: 15px; padding-left:200px;">Activity Pie Chart</span>
                             <canvas id="activity_pie_chart"/>
@@ -198,16 +198,16 @@
                 </div>
                 <div class="col-md-6">
                     <div class="oh-card" style="box-shadow:2px 4px 8px 2px rgba(0,0,0.3,0.2);
-       display: flex; justify-content: center; width:600px; height:600px;">
-                        <div style="width:700px; height:700px;">
-                            <span style="font-size: 15px; padding-left:240px;">Lost Leads</span>
-                            <canvas id="lost_lead_graph" style="padding-top:70px;"/>
+       display: flex; justify-content: center; width:700px; height:600px;">
+                        <div style="width:550px; height:700px;">
+                            <span style="font-size: 15px; padding-left:220px;">Lost Leads</span>
+                            <canvas id="lost_lead_graph" style="padding-top:20px;"/>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6" style="padding-top:70px;">
                     <div class="oh-card" style="box-shadow:2px 4px 8px 2px rgba(0,0,0.3,0.2);
-           display: flex; justify-content: center; width:600px; height:600px;">
+           display: flex; justify-content: center; width:700px; height:600px;">
                         <div style="width:700px; height:700px;">
                             <span style="font-size: 15px; padding-left:210px;">Leads By Campaign</span>
                             <canvas id="campaign_lead_graph" style="padding-top:70px;"/>
@@ -216,22 +216,62 @@
                 </div>
                 <div class="col-md-6" style="padding-top:70px;">
                     <div class="oh-card" style="box-shadow:2px 4px 8px 2px rgba(0,0,0.3,0.2);
-           display: flex; justify-content: center; width:600px; height:600px;">
+           display: flex; justify-content: center; width:700px; height:600px;">
                         <div style="width:550px; height:550px;">
                             <span style="font-size: 15px; padding-left:210px;">Leads By Medium</span>
-                            <canvas id="medium_lead_graph"/>
+                            <canvas id="medium_lead_graph" style="padding-top:50px;"/>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6" style="padding-top:70px;">
                     <div class="oh-card" style="box-shadow:2px 4px 8px 2px rgba(0,0,0.3,0.2);
-           display: flex; justify-content: center; width:600px; height:600px;">
+           display: flex; justify-content: center; width:700px; height:600px;">
                         <div style="width:550px; height:550px;">
                             <span style="font-size: 15px; padding-left:210px;">All Tile</span>
-                            <canvas id="all_tile_chart"/>
+                            <canvas id="all_tile_chart" style="padding-top:50px;"/>
                         </div>
                     </div>
                 </div>
+                <table class="table table">
+                    <thead>
+                        <tr>
+                            <th>January</th>
+                            <th>February</th>
+                            <th>March</th>
+                            <th>April</th>
+                            <th>May</th>
+                            <th>June</th>
+                            <th>July</th>
+                            <th>August</th>
+                            <th>September</th>
+                            <th>October</th>
+                            <th>November</th>
+                            <th>December</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <span id="templates">
+                                    <div id="win_ratio"/>
+                                </span>
+                            </td>
+                            <!--                            <td t-esc="result.win_ratio"/>-->
+                            <td>Demo</td>
+                            <td>Demo</td>
+                            <td>Demo</td>
+                            <td>Demo</td>
+                            <td>Demo</td>
+                            <td>Demo</td>
+                            <td>Demo</td>
+                            <td>Demo</td>
+                            <td>Demo</td>
+                            <td>Demo</td>
+                            <td>Demo</td>
+<!--                            <td>Demo</td>-->
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
     </t>
